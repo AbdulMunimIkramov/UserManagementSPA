@@ -51,8 +51,17 @@ export const UsersPage = () => {
               to={`/users/${user.id}`}
               sx={{ textDecoration: "none", "&:hover": { boxShadow: 6 } }}
             >
-              <CardContent>
-                <Typography variant="h6">{user.name}</Typography>
+              <CardContent
+                sx={{
+                  border: "1px solid black",
+                  borderRadius: "8px",
+                  p: 2,
+                  transition: "opacity 0.3s",
+                  "&:hover": {
+                    opacity: 0.5,
+                  },
+                }}
+              >
                 <Typography variant="h6">{user.name}</Typography>
                 <Typography color="textSecondary">{user.email}</Typography>
                 <Typography color="textSecondary">
